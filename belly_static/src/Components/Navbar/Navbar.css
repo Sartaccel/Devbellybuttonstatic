@@ -1,0 +1,91 @@
+/* =========================
+   NAVBAR – BELLY BUTTON
+========================= */
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+/* Nav Links */
+.nav-link {
+  font-weight: 400;            /* thin text */
+  font-size: 0.95rem;
+  color: #1f2937;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #0b0b4f;
+}
+
+/* Active link (optional) */
+.nav-link.active {
+  color: #0b0b4f;
+  font-weight: 500;
+}
+
+/* Navbar Toggle */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #0b0b4f;
+  border: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.btn-primary:hover {
+  background-color: #14147a;
+}
+
+/* Rounded Button */
+.rounded-pill {
+  border-radius: 50px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding-top: 10px;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+  }
+
+  .btn-primary {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  
+
+  .btn-primary {
+    margin-top: 10px;
+    width: auto;
+    max-width: 100%;
+  }
+}

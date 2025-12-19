@@ -1,0 +1,327 @@
+import React from "react";
+import heroimg from "../../Images/heroimg.png"
+import product from "../../Images/product.png"
+import Android from "../../Images/Android.jpg"
+import iOS from "../../Images/iOS.png"
+import "./Home.css";
+import Testimonial from "../Testimonial/Testimonial";
+import Support from "../Support/Support";
+function Home() {
+  return (
+    <>
+    {/* -------------------------------------------hero-section--------------------------------------- */}
+    <section id="hero" className="hero-section">
+      <div className="hero-wrapper">
+
+        {/* Left Content */}
+        <div className="hero-content">
+          <h5 className="hero-app-name">Belly Button</h5>
+
+          <h1 className="hero-title">
+            Turn ur friends into <br />
+            <span>your camera crew.</span>
+          </h1>
+
+          <p className="hero-description">
+            Belly Button lets everyone at your event share photos in real time.
+            One space for every memory, before the moment fades.
+          </p>
+
+          <div className="hero-actions">
+            <a href="#get-started" className="btn btn-primary">
+              Get Started
+            </a>
+            
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="hero-image">
+          <img
+            src={heroimg}
+            alt="Event photo sharing app preview"
+          />
+        </div>
+
+      </div>
+    </section>
+{/* -------------------------------------------------------Product----------------------------------------- */}
+   <section id="product" className="product-section">
+
+  {/* Center Heading */}
+  <div className="product-header">
+    <h2 className="product-main-title">Meet Belly Button</h2>
+  </div>
+
+  <div className="product-wrapper">
+
+    {/* LEFT — Image */}
+    <div className="product-visual">
+      <div className="visual-image">
+        <img
+          src={product}
+          alt="Belly Button live event photo gallery"
+        />
+      </div>
+    </div>
+
+    {/* RIGHT — Content */}
+    <div className="product-content">
+
+      <h3 className="section-title">
+        One place for every <span>event memory</span>
+      </h3>
+
+      <p className="section-description">
+        Belly Button is a private event based photo sharing platform built
+        for meaningful moments. Guests contribute photos as they happen,
+        creating a single organized gallery everyone can enjoy.
+      </p>
+
+      {/* FEATURE CARDS*/}
+      <div className="feature-cards no-icons">
+
+        <div className="feature-card">
+          <strong>Event-based galleries</strong>
+          <p>All photos are neatly organized by event.</p>
+        </div>
+
+        <div className="feature-card">
+          <strong>Live photo uploads</strong>
+          <p>Guests upload photos as moments happen.</p>
+        </div>
+
+        <div className="feature-card">
+          <strong>High-quality downloads</strong>
+          <p>Download memories anytime in original quality.</p>
+        </div>
+
+        <div className="feature-card">
+          <strong>Time-Based Access</strong>
+          <p>Admin can only access photos taken within a specific time frame.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{/* ----------------------------------------------------why us---------------------------------------- */}
+<section id="why-us" className="why-section">
+
+      <div className="why-header">
+        <h2 className="why-title">Why Belly Button</h2>
+        <p className="why-subtitle">
+          Designed for real moments, not message overload.
+        </p>
+      </div>
+
+      <div className="why-content">
+
+        <div className="why-line"></div>
+
+        <div className="why-item">
+          <div className="why-icon">
+            <i className="fa-solid fa-layer-group"></i>
+          </div>
+          <div className="why-text">
+            <h4>No scattered photos</h4>
+            <p>
+              All memories live in one shared gallery instead of multiple chats,
+              drives, and follow ups.
+            </p>
+          </div>
+        </div>
+
+        <div className="why-item">
+          <div className="why-icon">
+            <i className="fa-solid fa-clock"></i>
+          </div>
+          <div className="why-text">
+            <h4>Real time sharing</h4>
+            <p>
+              Guests upload photos instantly as the event happens,
+              so no moment is missed.
+            </p>
+          </div>
+        </div>
+
+        <div className="why-item">
+          <div className="why-icon">
+            <i className="fa-solid fa-lock"></i>
+          </div>
+          <div className="why-text">
+            <h4>Private by design</h4>
+            <p>
+              Invite only access keeps your event photos secure and personal.
+            </p>
+          </div>
+        </div>
+
+        <div className="why-item">
+          <div className="why-icon">
+            <i className="fa-solid fa-cloud-arrow-down"></i>
+          </div>
+          <div className="why-text">
+            <h4>Original quality downloads</h4>
+            <p>
+              Download photos anytime in full quality without compression.
+            </p>
+          </div>
+        </div>
+        <div className="why-item">
+          <div className="why-icon">
+            <i className="fa-solid fa-calendar-days"></i>
+          </div>
+          <div className="why-text">
+            <h4>Schedule event time</h4>
+            <p>
+              Set a start and end time for your event so photo sharing stays
+              focused and relevant.
+            </p>
+          </div>
+        </div>
+
+        
+        <div className="why-item">
+          <div className="why-icon">
+            <i className="fa-solid fa-share-nodes"></i>
+          </div>
+          <div className="why-text">
+            <h4>Share on any social platform</h4>
+            <p>
+              Easily share selected moments to social media while keeping
+              the full gallery private.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    {/* ---------------------------------------------------how it works-------------------------------------- */}
+     <section id="how-it-works" className="flow-section">
+
+      <div className="flow-header">
+        <h2 className="flow-title">How It Works</h2>
+        <p className="flow-subtitle">
+          A simple flow designed for everyone at your event.
+        </p>
+      </div>
+
+      <div className="flow-steps">
+
+        <div className="flow-step">
+          <div className="flow-icon">
+            <i className="fa-solid fa-calendar-plus"></i>
+          </div>
+          <span className="flow-number">01</span>
+          <h4>Create Shoot</h4>
+          <p>
+            The admin sets up the event with a scheduled start and end time.
+          </p>
+        </div>
+
+        <div className="flow-step">
+          <div className="flow-icon">
+            <i className="fa-solid fa-link"></i>
+          </div>
+          <span className="flow-number">02</span>
+          <h4>Invite Camera Crew</h4>
+          <p>
+            Guests are invited securely using a private event link.
+          </p>
+        </div>
+
+        <div className="flow-step">
+          <div className="flow-icon">
+            <i className="fa-solid fa-camera"></i>
+          </div>
+          <span className="flow-number">03</span>
+          <h4>Guests upload photos</h4>
+          <p>
+            Guests upload photos they capture during the event.
+          </p>
+        </div>
+
+        <div className="flow-step">
+          <div className="flow-icon">
+            <i className="fa-solid fa-images"></i>
+          </div>
+          <span className="flow-number">04</span>
+          <h4>Everyone views the gallery</h4>
+          <p>
+            All invited guests can view photos in real time.
+          </p>
+        </div>
+
+        <div className="flow-step">
+          <div className="flow-icon">
+            <i className="fa-solid fa-share-nodes"></i>
+          </div>
+          <span className="flow-number">05</span>
+          <h4>Download and share</h4>
+          <p>
+            Guests download photos and share moments on social media.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <Testimonial/>
+    <Support/>
+{/* --------------------------------------------------------Get Started--------------------------------- */}
+     <section id="get-started" className="getstart-section">
+  <div className="getstart-wrapper">
+
+    <h2 className="getstart-title">Start Sharing Moments</h2>
+
+    <p className="getstart-subtitle">
+      Download the Belly Button app and create your event.
+      Available on Android and iOS.
+    </p>
+
+    <div className="store-buttons">
+
+      {/* Google Play */}
+      <a
+        href="#playstore"
+        className="store-btn"
+        aria-label="Get it on Google Play"
+      >
+        <img src={Android} alt="Google Play" className="store-icon" />
+        <div className="store-text">
+          <span>Get it on</span>
+          <strong>Google Play</strong>
+        </div>
+      </a>
+
+      {/* App Store */}
+      <a
+        href="#appstore"
+        className="store-btn"
+        aria-label="Download on the App Store"
+      >
+        <img src={iOS} alt="App Store" className="store-icon" />
+        <div className="store-text">
+          <span>Download on the</span>
+          <strong>App Store</strong>
+        </div>
+      </a>
+
+    </div>
+
+    <p className="platform-note">
+      Compatible with Android & iOS devices
+    </p>
+
+  </div>
+</section>
+
+    </>
+  );
+}
+
+export default Home;

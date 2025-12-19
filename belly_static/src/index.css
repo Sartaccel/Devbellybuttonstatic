@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Anchor offset for sticky navbar */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+}
