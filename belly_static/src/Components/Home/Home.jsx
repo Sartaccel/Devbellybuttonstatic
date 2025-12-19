@@ -18,7 +18,7 @@ function Home() {
           <h5 className="hero-app-name">Belly Button</h5>
 
           <h1 className="hero-title">
-            Turn ur friends into <br />
+            Turn your friends into <br />
             <span>your camera crew.</span>
           </h1>
 
