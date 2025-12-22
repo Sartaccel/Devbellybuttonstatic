@@ -6,26 +6,26 @@ function Support() {
     {
       question: "Who can create an event?",
       answer:
-        "Only the admin can create an event. The admin sets the event details, schedule time, and manages guest access."
+        "Only the Event director can create an event. The Event director sets the event details, schedule time, and manages camera crew access."
     },
     {
-      question: "How do guests join an event?",
+      question: "How do camera Crew join an event?",
       answer:
-        "Guests can join an event using a secure invite link shared by the admin. There is no public access."
+        "Camera Crew can join an event using a secure invite link shared by the event director. There is no public access."
     },
     {
-      question: "Can guests upload photos anytime?",
+      question: "Can Crew upload photos anytime?",
       answer:
-        "Guests can upload photos only during the scheduled event time set by the admin."
+        "Crew can upload photos only during the scheduled event time set by the event director."
     },
     {
       question: "Who can access the photos?",
-      answer: "All photos are private and can be accessed only by the admin within the event."
+      answer: "All photos are private and can be accessed only by the Event director within the event."
 
     },
     {
       question: "Can photos be downloaded and shared?",
-      answer: "Only the admin can download photos in original quality and share selected moments."
+      answer: "Event director can download photos in original quality and share selected moments."
 
     }
   ];

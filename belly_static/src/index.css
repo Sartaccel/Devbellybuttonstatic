@@ -13,7 +13,7 @@ code {
 }
 /* Anchor offset for sticky navbar */
 section[id] {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 60px;
 }
 
 @media (max-width: 768px) {

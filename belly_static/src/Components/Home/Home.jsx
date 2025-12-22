@@ -3,9 +3,12 @@ import heroimg from "../../Images/heroimg.png"
 import product from "../../Images/product.png"
 import Android from "../../Images/Android.jpg"
 import iOS from "../../Images/iOS.png"
+import mobile from"../../Images/mobile.avif"
 import "./Home.css";
 import Testimonial from "../Testimonial/Testimonial";
 import Support from "../Support/Support";
+import Contact from "../Contact/Contact";
+import ScrollToTop from "../Scroll/ScrollToTop";
 function Home() {
   return (
     <>
@@ -18,7 +21,7 @@ function Home() {
           <h5 className="hero-app-name">Belly Button</h5>
 
           <h1 className="hero-title">
-            Turn ur friends into <br />
+            Turn your friends into <br />
             <span>your camera crew.</span>
           </h1>
 
@@ -73,32 +76,32 @@ function Home() {
       </h3>
 
       <p className="section-description">
-        Belly Button is a private event based photo sharing platform built
-        for meaningful moments. Guests contribute photos as they happen,
-        creating a single organized gallery everyone can enjoy.
+        Belly Button is a private event based photo sharing platform where Crew
+        upload photos in real time and create a single organized gallery in original
+         high quality without loss of resolution.
       </p>
 
       {/* FEATURE CARDS*/}
       <div className="feature-cards no-icons">
 
         <div className="feature-card">
-          <strong>Event-based galleries</strong>
+          <strong>Event Based Galleries</strong>
           <p>All photos are neatly organized by event.</p>
         </div>
 
         <div className="feature-card">
-          <strong>Live photo uploads</strong>
-          <p>Guests upload photos as moments happen.</p>
+          <strong>Automatic Sync</strong>
+          <p>Photos sync to the Event Director in real time on a centralized platform.</p>
         </div>
 
         <div className="feature-card">
-          <strong>High-quality downloads</strong>
-          <p>Download memories anytime in original quality.</p>
+          <strong>Duplicate Detection</strong>
+          <p>AI removes duplicate and low-quality photos automatically.</p>
         </div>
 
         <div className="feature-card">
-          <strong>Time-Based Access</strong>
-          <p>Admin can only access photos taken within a specific time frame.</p>
+          <strong>Time Based Access</strong>
+          <p>Event Director can only access photos taken within a specific time frame.</p>
         </div>
 
       </div>
@@ -111,95 +114,94 @@ function Home() {
 {/* ----------------------------------------------------why us---------------------------------------- */}
 <section id="why-us" className="why-section">
 
-      <div className="why-header">
-        <h2 className="why-title">Why Belly Button</h2>
-        <p className="why-subtitle">
-          Designed for real moments, not message overload.
-        </p>
+  <div className="why-header">
+    <h2 className="why-title">Why Belly Button</h2>
+    <p className="why-subtitle">
+      Designed for real moments, not message overload.
+    </p>
+  </div>
+
+  <div className="why-content">
+
+    {/* LEFT SIDE — TEXT CONTENT */}
+    <div className="why-left">
+
+      <div className="why-line"></div>
+      <div className="why-item">
+        <div className="why-icon">
+          <i className="fa-solid fa-calendar-days"></i>
+        </div>
+        <div className="why-text">
+          <h4>Schedule event time</h4>
+          <p>Set start and end time for a time-bound shoot.</p>
+        </div>
       </div>
 
-      <div className="why-content">
-
-        <div className="why-line"></div>
-
-        <div className="why-item">
-          <div className="why-icon">
-            <i className="fa-solid fa-layer-group"></i>
-          </div>
-          <div className="why-text">
-            <h4>No scattered photos</h4>
-            <p>
-              All memories live in one shared gallery instead of multiple chats,
-              drives, and follow ups.
-            </p>
-          </div>
+      <div className="why-item">
+        <div className="why-icon">
+          <i className="fa-solid fa-layer-group"></i>
         </div>
-
-        <div className="why-item">
-          <div className="why-icon">
-            <i className="fa-solid fa-clock"></i>
-          </div>
-          <div className="why-text">
-            <h4>Real time sharing</h4>
-            <p>
-              Guests upload photos instantly as the event happens,
-              so no moment is missed.
-            </p>
-          </div>
+        <div className="why-text">
+          <h4>No scattered photos</h4>
+          <p>All memories live in one shared gallery instead of multiple chats.</p>
         </div>
-
-        <div className="why-item">
-          <div className="why-icon">
-            <i className="fa-solid fa-lock"></i>
-          </div>
-          <div className="why-text">
-            <h4>Private by design</h4>
-            <p>
-              Invite only access keeps your event photos secure and personal.
-            </p>
-          </div>
-        </div>
-
-        <div className="why-item">
-          <div className="why-icon">
-            <i className="fa-solid fa-cloud-arrow-down"></i>
-          </div>
-          <div className="why-text">
-            <h4>Original quality downloads</h4>
-            <p>
-              Download photos anytime in full quality without compression.
-            </p>
-          </div>
-        </div>
-        <div className="why-item">
-          <div className="why-icon">
-            <i className="fa-solid fa-calendar-days"></i>
-          </div>
-          <div className="why-text">
-            <h4>Schedule event time</h4>
-            <p>
-              Set a start and end time for your event so photo sharing stays
-              focused and relevant.
-            </p>
-          </div>
-        </div>
-
-        
-        <div className="why-item">
-          <div className="why-icon">
-            <i className="fa-solid fa-share-nodes"></i>
-          </div>
-          <div className="why-text">
-            <h4>Share on any social platform</h4>
-            <p>
-              Easily share selected moments to social media while keeping
-              the full gallery private.
-            </p>
-          </div>
-        </div>
-
       </div>
-    </section>
+
+      <div className="why-item">
+        <div className="why-icon">
+          <i className="fa-solid fa-clock"></i>
+        </div>
+        <div className="why-text">
+          <h4>Real time sharing</h4>
+          <p>Crew upload photos instantly as the event happens.</p>
+        </div>
+      </div>
+
+      <div className="why-item">
+        <div className="why-icon">
+          <i className="fa-solid fa-lock"></i>
+        </div>
+        <div className="why-text">
+          <h4>Private by design</h4>
+          <p>Invite-only access keeps your event photos secure.</p>
+        </div>
+      </div>
+
+      <div className="why-item">
+        <div className="why-icon">
+          <i className="fa-solid fa-cloud-arrow-down"></i>
+        </div>
+        <div className="why-text">
+          <h4>Original quality downloads</h4>
+          <p>Download photos anytime in original high quality.</p>
+        </div>
+      </div>
+
+      
+
+      <div className="why-item">
+        <div className="why-icon">
+          <i className="fa-solid fa-share-nodes"></i>
+        </div>
+        <div className="why-text">
+          <h4>Share on social platforms</h4>
+          <p>Share moments publicly while keeping gallery private.</p>
+        </div>
+      </div>
+
+    </div>
+
+    {/* RIGHT SIDE — IMAGE */}
+    <div className="why-right">
+      <img
+        src={mobile}
+        alt="Belly Button App Preview"
+      />
+    </div>
+
+  </div>
+</section>
+
     {/* ---------------------------------------------------how it works-------------------------------------- */}
      <section id="how-it-works" className="flow-section">
 
@@ -218,9 +220,7 @@ function Home() {
           </div>
           <span className="flow-number">01</span>
           <h4>Create Shoot</h4>
-          <p>
-            The admin sets up the event with a scheduled start and end time.
-          </p>
+          <p>The Event Director sets the event start and end time.</p>
         </div>
 
         <div className="flow-step">
@@ -230,7 +230,7 @@ function Home() {
           <span className="flow-number">02</span>
           <h4>Invite Camera Crew</h4>
           <p>
-            Guests are invited securely using a private event link.
+            Crew are invited securely using a private event link.
           </p>
         </div>
 
@@ -239,9 +239,9 @@ function Home() {
             <i className="fa-solid fa-camera"></i>
           </div>
           <span className="flow-number">03</span>
-          <h4>Guests upload photos</h4>
+          <h4>Crew upload photos</h4>
           <p>
-            Guests upload photos they capture during the event.
+            Crew upload photos they capture during the event.
           </p>
         </div>
 
@@ -250,9 +250,9 @@ function Home() {
             <i className="fa-solid fa-images"></i>
           </div>
           <span className="flow-number">04</span>
-          <h4>Everyone views the gallery</h4>
+          <h4>View gallery</h4>
           <p>
-            All invited guests can view photos in real time.
+            All photos are visible only to the Event Director.
           </p>
         </div>
 
@@ -262,9 +262,7 @@ function Home() {
           </div>
           <span className="flow-number">05</span>
           <h4>Download and share</h4>
-          <p>
-            Guests download photos and share moments on social media.
-          </p>
+          <p>Photos can be downloaded and shared in real time.</p>
         </div>
 
       </div>
@@ -319,6 +317,8 @@ function Home() {
 
   </div>
 </section>
+<Contact/>
+<ScrollToTop/>
 
     </>
   );

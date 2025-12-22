@@ -3,6 +3,19 @@
 * {
   font-family: 'Poppins', system-ui, sans-serif;
 }
+/* =========================
+   GLOBAL RESET (REQUIRED)
+========================= */
+
+
+
+
+
+body {
+  min-height: 100%;
+  background-color: #ffffff;
+}
+
 
 /* =========================
    HERO SECTION
@@ -10,29 +23,47 @@
 
 .hero-section {
   background: #ffffff;
-  padding: clamp(60px, 8vw, 120px) 20px;
+
+  /* Full screen minus navbar height */
+  min-height: calc(100vh - 72px);
+  min-height: calc(100svh - 72px);
+
+  display: flex;
+  align-items: center;
+
+  /* ✅ Fluid vertical + horizontal spacing */
+  padding-block: clamp(24px, 4vw, 56px);
+  padding-inline: clamp(20px, 4vw, 64px);
+  
+
   overflow-x: hidden;
 }
 
+/* =========================
+   HERO WRAPPER
+========================= */
+
 .hero-wrapper {
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  max-width: 1280px;      /* 🔥 balanced for all laptops */
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: clamp(32px, 5vw, 60px);
+  gap: clamp(32px, 5vw, 64px);
 }
 
-/* -------------------------
+/* =========================
    TEXT
-------------------------- */
+========================= */
 
 .hero-content {
   max-width: 560px;
 }
 
 .hero-app-name {
-  color: #0B0B4F;
+  color: #0b0b4f;
   font-weight: 500;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -41,30 +72,30 @@
 .hero-title {
   font-size: clamp(28px, 4.5vw, 48px);
   font-weight: 700;
-  color: #0B0B4F;
+  color: #0b0b4f;
   line-height: 1.15;
   margin-bottom: 20px;
 }
 
 .hero-title span {
-  color: #1E1E8A;
+  color: #1e1e8a;
 }
 
 .hero-description {
   font-size: clamp(16px, 1.5vw, 18px);
-  color: #6B7280;
+  color: #6b7280;
   max-width: 520px;
   margin-bottom: 32px;
   line-height: 1.6;
 }
 
-/* -------------------------
-   BUTTON (NO FLEX)
-------------------------- */
+/* =========================
+   CTA BUTTON
+========================= */
 
 .hero-actions {
   margin-top: 24px;
-  text-align: left; /* desktop */
+  text-align: left;
 }
 
 .btn {
@@ -73,27 +104,32 @@
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.25s ease;
+
+  transition:
+    background 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* Primary button */
 .btn-primary {
-  background: #0B0B4F;
+  background: #0b0b4f;
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background: #1E1E8A;
+  background: #1e1e8a;
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 11, 79, 0.25);
 }
 
 .btn-primary:active {
   transform: translateY(0);
+  box-shadow: none;
 }
 
-/* -------------------------
+/* =========================
    IMAGE
-------------------------- */
+========================= */
 
 .hero-image {
   display: flex;
@@ -102,7 +138,7 @@
 }
 
 .hero-image img {
-  width: clamp(220px, 35vw, 380px);
+  width: clamp(240px, 34vw, 420px);
   max-width: 100%;
   border-radius: 24px;
   box-shadow: 0 20px 40px rgba(11, 11, 79, 0.18);
@@ -118,20 +154,17 @@
     text-align: center;
   }
 
-  .hero-content {
-    max-width: 100%;
-  }
-
+  .hero-content,
   .hero-description {
     max-width: 100%;
   }
 
   .hero-actions {
-    text-align: center; /* ✅ button centered */
+    text-align: center;
   }
 
   .btn {
-    max-width: 200px; /* ✅ tablet size */
+    max-width: 220px;
   }
 }
 
@@ -141,13 +174,13 @@
 
 @media (max-width: 480px) {
   .btn {
-    max-width: 50%; /* ✅ mobile size */
+    max-width: 60%;
     padding: 14px 28px;
   }
 }
 
 /* =========================
-   VERY SMALL DEVICES (320px)
+   VERY SMALL DEVICES
 ========================= */
 
 @media (max-width: 360px) {
@@ -156,13 +189,23 @@
   }
 
   .btn {
-    max-width: 50%;
+    max-width: 70%;
+  }
+}
+
+/* =========================
+   ULTRA-WIDE SCREENS
+========================= */
+
+@media (min-width: 1600px) {
+  .hero-wrapper {
+    max-width: 1360px;
   }
 }
 
 
 
-/* ------------------------------------------------------product------------------------------------------ */
+/* ------------------------------------------------------About us------------------------------------------ */
 
 /* =========================
    PRODUCT SECTION
@@ -170,16 +213,19 @@
 
 .product-section {
   background: #F8F9FF;
-  padding: 40px 20px;
+
+  /* ✅ fluid vertical + horizontal spacing */
+  padding-block: clamp(24px, 4vw, 56px);
+  padding-inline: clamp(20px, 4vw, 64px);
 }
 
-/* -------------------------
+/* =========================
    HEADING
-------------------------- */
+========================= */
 
 .product-header {
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: clamp(28px, 4vw, 40px);
 }
 
 .product-main-title {
@@ -190,22 +236,23 @@
   letter-spacing: -0.4px;
 }
 
-/* -------------------------
+/* =========================
    LAYOUT
-------------------------- */
+========================= */
 
 .product-wrapper {
-  max-width: 1100px;
-  margin: auto;
+  width: 100%;
+  max-width: 1280px;        /* 🔥 wider like hero */
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.2fr; /* image | content */
   align-items: center;
-  gap: 60px;
+  gap: clamp(64px, 8vw, 120px);
 }
 
-/* -------------------------
+/* =========================
    IMAGE (LEFT)
-------------------------- */
+========================= */
 
 .product-visual {
   display: flex;
@@ -213,7 +260,7 @@
 }
 
 .visual-image {
-  width: 420px;
+  width: clamp(260px, 32vw, 420px);
   aspect-ratio: 1 / 1;
   border-radius: 26px;
   background: linear-gradient(180deg, #ffffff, #F4F6FF);
@@ -228,9 +275,9 @@
   border-radius: 22px;
 }
 
-/* -------------------------
+/* =========================
    CONTENT (RIGHT)
-------------------------- */
+========================= */
 
 .product-content {
   max-width: 560px;
@@ -248,19 +295,19 @@
 }
 
 .section-description {
-  font-size: 16.5px;
+  font-size: clamp(15px, 1.6vw, 16.5px);
   color: #6B7280;
   line-height: 1.7;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
-/* -------------------------
+/* =========================
    FEATURE CARDS (NO ICONS)
-------------------------- */
+========================= */
 
 .feature-cards.no-icons {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 
@@ -277,7 +324,6 @@
   box-shadow: 0 18px 42px rgba(11, 11, 79, 0.12);
 }
 
-/* Text */
 .feature-card strong {
   display: block;
   font-size: 16px;
@@ -294,18 +340,8 @@
 }
 
 /* =========================
-   RESPONSIVE
+   TABLET & MOBILE
 ========================= */
-
-@media (max-width: 1024px) {
-  .product-wrapper {
-    gap: 40px;
-  }
-
-  .visual-image {
-    width: 360px;
-  }
-}
 
 @media (max-width: 900px) {
   .product-wrapper {
@@ -317,22 +353,21 @@
     max-width: 100%;
   }
 
-  .visual-image {
-    width: 300px;
-    margin-bottom: 20px;
-  }
-
   .feature-cards.no-icons {
     grid-template-columns: 1fr;
     max-width: 420px;
-    margin: auto;
+    margin: 0 auto;
     text-align: left;
   }
 }
 
+/* =========================
+   SMALL MOBILE
+========================= */
+
 @media (max-width: 480px) {
   .product-section {
-    padding: 60px 16px;
+    padding-inline: 16px;
   }
 
   .visual-image {
@@ -344,13 +379,30 @@
   }
 }
 
+/* =========================
+   ULTRA-WIDE SCREENS
+========================= */
+
+@media (min-width: 1600px) {
+  .product-wrapper {
+    max-width: 1360px;
+  }
+}
+
+
 /* ----------------------------------------------------why us----------------------- */
 
 .why-section {
   background: #ffffff;
   padding: 40px 20px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-block: clamp(24px, 4vw, 56px);
+  padding-inline: clamp(20px, 4vw, 64px);
 }
 
+/* Header */
 .why-header {
   text-align: center;
   margin-bottom: 60px;
@@ -368,14 +420,36 @@
   color: #6B7280;
 }
 
-/* Layout */
+/* 🔹 MAIN LAYOUT: LEFT + RIGHT */
 .why-content {
-  max-width: 900px;
+  max-width: 1200px;              /* increased */
   margin: auto;
+  display: flex;                  /* NEW */
+  gap: 80px;                      /* space between text & image */
   position: relative;
 }
 
-/* Vertical line */
+/* 🔹 LEFT SIDE */
+.why-left {
+  flex: 1;
+  position: relative;             /* needed for vertical line */
+}
+
+/* 🔹 RIGHT SIDE (IMAGE) */
+.why-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Vertical line (only for left side) */
 .why-line {
   position: absolute;
   left: 22px;
@@ -415,7 +489,8 @@
 /* Hover effect */
 .why-icon:hover {
   transform: scale(1.08);
-box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);}
+  box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);
+}
 
 /* Text */
 .why-text h4 {
@@ -429,10 +504,21 @@ box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);}
   font-size: 15px;
   color: #6B7280;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 520px;               /* slightly reduced */
 }
 
-/* Responsive */
+/* 🔹 RESPONSIVE */
+@media (max-width: 992px) {
+  .why-content {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .why-right {
+    order: -1;                    /* image on top (optional) */
+  }
+}
+
 @media (max-width: 768px) {
   .why-line {
     left: 20px;
@@ -456,20 +542,25 @@ box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);}
     align-items: flex-start;
   }
 }
-/* ---------------------------------------------------how it works-------------------------------------- */
 
+/* ---------------------------------------------------how it works-------------------------------------- */
 .flow-section {
-  background: #ffffff;
-  padding: 40px 20px 90px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+   padding-block: clamp(24px, 4vw, 56px);
+  padding-inline: clamp(20px, 4vw, 64px);
+
 }
 
+/* Header */
 .flow-header {
   text-align: center;
   margin-bottom: 70px;
 }
 
 .flow-title {
-  font-size: 38px;
+  font-size: clamp(30px, 4vw, 38px);
   font-weight: 800;
   color: #0B0B4F;
   margin-bottom: 10px;
@@ -482,11 +573,9 @@ box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);}
 
 /* Steps Layout */
 .flow-steps {
-  max-width: 1100px;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
+  gap: clamp(24px, 3vw, 30px);
 }
 
 /* Step */
@@ -509,9 +598,11 @@ box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);}
   font-size: 22px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 .flow-icon:hover {
   transform: scale(1.08);
-box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);}
+  box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);
+}
 
 /* Number */
 .flow-number {
@@ -570,11 +661,8 @@ box-shadow: 0 4px 12px rgba(11, 11, 79, 0.12);}
     grid-template-columns: 1fr;
     gap: 36px;
   }
-
-  .flow-title {
-    font-size: 30px;
-  }
 }
+
 /* -------------------------------------------Get Started----------------------------- */
 
 .getstart-section {

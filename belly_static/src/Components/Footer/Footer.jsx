@@ -19,13 +19,12 @@ function Footer() {
               />
             </div>
             <p className="footer-text">
-              Moments happen once but memories grow stronger when everyone 
-              shares them together in one beautiful and lasting place.
+              Moments happen once. Memories grow when shared together.
             </p>
           </div>
 
           {/* 2️⃣ Quick Links */}
-          <div className="col-lg-3 col-md-6">
+          <div className="col-lg-2 col-md-6">
             <h6 className="footer-title">Quick Links</h6>
             <ul className="list-unstyled footer-links">
               <li><a href="#product">Product</a></li>
@@ -72,7 +71,7 @@ function Footer() {
 
         {/* Bottom Bar */}
         <div className="footer-bottom text-center mt-4 pt-3">
-          © {new Date().getFullYear()} SART. All rights reserved.
+          © {new Date().getFullYear()} BellyButton. All rights reserved.
         </div>
       </div>
     </footer>
