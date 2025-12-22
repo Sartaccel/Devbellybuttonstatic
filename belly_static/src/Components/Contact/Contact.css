@@ -1,0 +1,160 @@
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  background: #f4f6ff;
+  padding-block: clamp(40px, 6vw, 80px);
+  padding-inline: clamp(16px, 4vw, 64px);
+  text-align: center;
+}
+
+.contact-title {
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 800;
+  color: #0b0b4f;
+  margin-bottom: 8px;
+}
+
+.contact-subtitle {
+  color: #4b5563;
+  margin-bottom: 28px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.contact-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: clamp(24px, 4vw, 36px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(11, 11, 79, 0.08);
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0b0b4f;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #dbe0ff;
+  font-size: 14.5px;
+  transition: 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0b0b4f;
+  box-shadow: 0 0 0 3px rgba(11, 11, 79, 0.12);
+  outline: none;
+}
+
+.error-text {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: #dc2626;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.contact-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 0;
+  background: #0b0b4f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #1e1e8a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(11, 11, 79, 0.25);
+}
+
+/* =========================
+   ALERT
+========================= */
+
+.form-alert {
+  max-width: 520px;
+  margin: 0 auto 20px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 14.5px;
+  animation: slideFade 0.4s ease;
+}
+
+.form-alert.success {
+  background: #e8ecff;
+  color: #0b0b4f;
+  border: 1px solid #c7d2fe;
+}
+
+.form-alert.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   PHONE INPUT
+========================= */
+
+.phone-container {
+  width: 100%;
+}
+
+.phone-input {
+  width: 100% !important;
+  padding: 14px 16px 14px 58px !important;
+  border-radius: 12px !important;
+  border: 1px solid #dbe0ff !important;
+}
+
+.phone-flag {
+  border-radius: 12px 0 0 12px !important;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .contact-form {
+    padding: 22px 18px;
+  }
+}

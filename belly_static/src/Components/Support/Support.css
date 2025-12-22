@@ -4,7 +4,8 @@
 
 .support-section {
   background: #F8F9FF;
-  padding: 40px 20px;
+   padding-block: clamp(24px, 4vw, 56px);
+  padding-inline: clamp(20px, 4vw, 64px);
 }
 
 .support-header {

@@ -69,7 +69,7 @@ function Navbar() {
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 text-center">
   <li className="nav-item">
     <a className="nav-link" href="#product" data-section="product" onClick={closeNavbar}>
-      Product
+      About
     </a>
   </li>
 
@@ -94,6 +94,11 @@ function Navbar() {
   <li className="nav-item">
     <a className="nav-link" href="#support" data-section="support" onClick={closeNavbar}>
       Support
+    </a>
+  </li>
+  <li className="nav-item">
+    <a className="nav-link" href="#contact" data-section="contact" onClick={closeNavbar}>
+      Contact
     </a>
   </li>
 

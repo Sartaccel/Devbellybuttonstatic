@@ -1,18 +1,29 @@
+/* =========================
+   FOOTER – BELLY BUTTON
+========================= */
+
 .footer-dark {
   background-color: #040430;
+  overflow: hidden;
+  padding-block: 32px;
+  padding-inline: clamp(16px, 3vw, 48px);
+  padding-bottom: calc(32px + env(safe-area-inset-bottom));
 }
+
+/* Logo */
 .footer-logo img {
-  width: 100px;   /* change this value as needed */
+  width: 100px;
   height: auto;
 }
 
-
+/* Titles */
 .footer-title {
   color: #ffffff;
   font-weight: 600;
   margin-bottom: 16px;
 }
 
+/* Text */
 .footer-text {
   color: #cfd3ff;
   font-size: 0.95rem;
@@ -25,6 +36,12 @@
 
 .footer-text a:hover {
   color: #ffffff;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding-left: 0;
 }
 
 .footer-links li {
@@ -41,24 +58,38 @@
   color: #ffffff;
 }
 
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
 .footer-social a {
   color: #cfd3ff;
   font-size: 1.3rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-social a:hover {
   color: #ffffff;
+  transform: translateY(-2px);
 }
 
+/* Bottom Bar */
 .footer-bottom {
+  margin-top: 24px;
+  padding-top: 16px;
+
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   color: #cfd3ff;
   font-size: 0.85rem;
-  padding-bottom: 20px;
+  text-align: center;
 }
 
-/* ---------- Mobile Responsive Centering ---------- */
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
 @media (max-width: 767px) {
   .footer-dark {
     text-align: center;
@@ -66,10 +97,6 @@
 
   .footer-dark .d-flex {
     justify-content: center !important;
-  }
-
-  .footer-links {
-    padding-left: 0;
   }
 
   .footer-links li {
