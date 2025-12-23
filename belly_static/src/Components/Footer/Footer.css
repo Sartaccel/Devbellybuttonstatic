@@ -1,6 +1,10 @@
 /* =========================
    FOOTER – BELLY BUTTON
 ========================= */
+footer {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 
 .footer-dark {
   background-color: #040430;
