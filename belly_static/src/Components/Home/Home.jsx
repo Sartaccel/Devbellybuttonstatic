@@ -18,7 +18,7 @@ function Home() {
 
         {/* Left Content */}
         <div className="hero-content">
-          <h5 className="hero-app-name">Belly Button</h5>
+          <h5 className="hero-app-name">BellyButton</h5>
 
           <h1 className="hero-title">
             Turn your friends into <br />
@@ -26,7 +26,7 @@ function Home() {
           </h1>
 
           <p className="hero-description">
-            Belly Button lets everyone at your event share photos in real time.
+            BellyButton lets everyone at your event share photos in real time.
             One space for every memory, before the moment fades.
           </p>
 
@@ -72,7 +72,7 @@ function Home() {
     <div className="product-content">
 
       <h3 className="section-title">
-        One place for every <span>event memory</span>
+        All captured moments<span> in one place.</span>
       </h3>
 
       <p className="section-description">
@@ -84,27 +84,28 @@ function Home() {
       {/* FEATURE CARDS*/}
       <div className="feature-cards no-icons">
 
-        <div className="feature-card">
-          <strong>Event Based Galleries</strong>
-          <p>All photos are neatly organized by event.</p>
-        </div>
+  <div className="feature-card">
+    <strong>Real-Time Photo Uploads</strong>
+    <p>Crew upload photos instantly as the event happens.</p>
+  </div>
 
-        <div className="feature-card">
-          <strong>Automatic Sync</strong>
-          <p>Photos sync to the Event Director in real time on a centralized platform.</p>
-        </div>
+  <div className="feature-card">
+    <strong>Private Event Access</strong>
+    <p>Only invited crew can upload event photos securely.</p>
+  </div>
 
-        <div className="feature-card">
-          <strong>Duplicate Detection</strong>
-          <p>AI removes duplicate and low-quality photos automatically.</p>
-        </div>
+  <div className="feature-card">
+    <strong>Single Organized Gallery</strong>
+    <p>All photos are collected into one clean, organized event gallery.</p>
+  </div>
 
-        <div className="feature-card">
-          <strong>Time Based Access</strong>
-          <p>Event Director can only access photos taken within a specific time frame.</p>
-        </div>
+  <div className="feature-card">
+    <strong>Original Pixel Quality</strong>
+<p>Photos retain original pixel resolution without compression.</p>
+  </div>
 
-      </div>
+</div>
+
 
     </div>
 
@@ -133,7 +134,7 @@ function Home() {
         </div>
         <div className="why-text">
           <h4>Schedule event time</h4>
-          <p>Set start and end time for a time-bound shoot.</p>
+          <p>Event Directors set a defined start and end time.</p>
         </div>
       </div>
 
@@ -162,7 +163,7 @@ function Home() {
           <i className="fa-solid fa-lock"></i>
         </div>
         <div className="why-text">
-          <h4>Private by design</h4>
+          <h4>Private Event Access</h4>
           <p>Invite-only access keeps your event photos secure.</p>
         </div>
       </div>
@@ -220,7 +221,7 @@ function Home() {
           </div>
           <span className="flow-number">01</span>
           <h4>Create Shoot</h4>
-          <p>The Event Director sets the event start and end time.</p>
+          <p>Event Directors set a defined start and end time.</p>
         </div>
 
         <div className="flow-step">
@@ -228,21 +229,21 @@ function Home() {
             <i className="fa-solid fa-link"></i>
           </div>
           <span className="flow-number">02</span>
-          <h4>Invite Camera Crew</h4>
+          <h4>Invite Friends</h4>
           <p>
-            Crew are invited securely using a private event link.
+            Friends are invited as crew through a private link.
           </p>
         </div>
+
+        
 
         <div className="flow-step">
           <div className="flow-icon">
             <i className="fa-solid fa-camera"></i>
           </div>
           <span className="flow-number">03</span>
-          <h4>Crew upload photos</h4>
-          <p>
-            Crew upload photos they capture during the event.
-          </p>
+          <h4>Accept & Upload Photos</h4>
+          <p>Crew accept the invite and upload captured photos.</p>
         </div>
 
         <div className="flow-step">
@@ -262,7 +263,7 @@ function Home() {
           </div>
           <span className="flow-number">05</span>
           <h4>Download and share</h4>
-          <p>Photos can be downloaded and shared in real time.</p>
+          <p>Download and share photos without pixel loss.</p>
         </div>
 
       </div>
@@ -270,6 +271,7 @@ function Home() {
 
     <Testimonial/>
     <Support/>
+    <Contact/>
 {/* --------------------------------------------------------Get Started--------------------------------- */}
      <section id="get-started" className="getstart-section">
   <div className="getstart-wrapper">
@@ -317,7 +319,7 @@ function Home() {
 
   </div>
 </section>
-<Contact/>
+
 <ScrollToTop/>
 
     </>
