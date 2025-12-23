@@ -27,10 +27,10 @@ function Footer() {
           <div className="col-lg-2 col-md-6">
             <h6 className="footer-title">Quick Links</h6>
             <ul className="list-unstyled footer-links">
-              <li><a href="#product">Product</a></li>
+              <li><a href="#product">About</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Term of Service</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
 
