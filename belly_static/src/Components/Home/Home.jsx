@@ -53,7 +53,7 @@ function Home() {
 
   {/* Center Heading */}
   <div className="product-header">
-    <h2 className="product-main-title">Meet Belly Button</h2>
+    <h2 className="product-main-title">Meet BellyButton</h2>
   </div>
 
   <div className="product-wrapper">
@@ -63,7 +63,7 @@ function Home() {
       <div className="visual-image">
         <img
           src={product}
-          alt="Belly Button live event photo gallery"
+          alt="BellyButton live event photo gallery"
         />
       </div>
     </div>
@@ -76,7 +76,7 @@ function Home() {
       </h3>
 
       <p className="section-description">
-        Belly Button is a private event based photo sharing platform where Crew
+        BellyButton is a private event based photo sharing platform where Crew
         upload photos in real time and create a single organized gallery in original
          high quality without loss of resolution.
       </p>
@@ -116,7 +116,7 @@ function Home() {
 <section id="why-us" className="why-section">
 
   <div className="why-header">
-    <h2 className="why-title">Why Belly Button</h2>
+    <h2 className="why-title">Why BellyButton</h2>
     <p className="why-subtitle">
       Designed for real moments, not message overload.
     </p>
@@ -196,7 +196,7 @@ function Home() {
     <div className="why-right">
       <img
         src={mobile}
-        alt="Belly Button App Preview"
+        alt="BellyButton App Preview"
       />
     </div>
 
@@ -279,7 +279,7 @@ function Home() {
     <h2 className="getstart-title">Start Sharing Moments</h2>
 
     <p className="getstart-subtitle">
-      Download the Belly Button app and create your event.
+      Download the BellyButton app and create your event.
       Available on Android and iOS.
     </p>
 
