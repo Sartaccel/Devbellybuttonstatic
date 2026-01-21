@@ -18,6 +18,7 @@ function Contact() {
     message: ""
   });
 
+  // ---------------- VALIDATION ----------------
   const validate = () => {
     const newErrors = {};
 
@@ -45,22 +46,11 @@ function Contact() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  // ---------------- SUBMIT (Web3Forms) ----------------
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validate()) {
-      setAlert({
-        show: true,
-        type: "success",
-        message: "Thank you! Your message has been sent successfully."
-      });
-
-      setForm({ name: "", email: "", phone: "", message: "" });
-
-      setTimeout(() => {
-        setAlert({ show: false, type: "", message: "" });
-      }, 3000);
-    } else {
+    if (!validate()) {
       setAlert({
         show: true,
         type: "error",
@@ -70,7 +60,62 @@ function Contact() {
       setTimeout(() => {
         setAlert({ show: false, type: "", message: "" });
       }, 3000);
+
+      return;
     }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "d6ebbf96-e213-4355-b66e-95161f2f0d64", // 👈 paste here
+          subject: "New Message from BellyButton Website",
+          from_name: "BellyButton Website",
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+
+          // spam protection
+          botcheck: ""
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setAlert({
+          show: true,
+          type: "success",
+          message: "Thank you! Your message has been sent successfully."
+        });
+
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          message: ""
+        });
+      } else {
+        throw new Error("Submission failed");
+      }
+
+    } catch (error) {
+      console.error("Web3Forms Error:", error);
+
+      setAlert({
+        show: true,
+        type: "error",
+        message: "Something went wrong. Please try again later."
+      });
+    }
+
+    setTimeout(() => {
+      setAlert({ show: false, type: "", message: "" });
+    }, 3000);
   };
 
   return (

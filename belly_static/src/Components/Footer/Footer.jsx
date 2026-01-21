@@ -46,7 +46,7 @@ function Footer() {
               </li>
               <li className="mt-2">
                 <i className="fas fa-phone me-2"></i>
-                <a href="tel:+919876543210">+91 XXXXX XXXXX</a>
+                <a href="tel:+919876543210">(404) 823-0257</a>
               </li>
             </ul>
           </div>

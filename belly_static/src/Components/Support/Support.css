@@ -3,7 +3,7 @@
 ========================= */
 
 .support-section {
-  background: #F8F9FF;
+  background: #ffffff;
    padding-block: clamp(24px, 4vw, 56px);
   padding-inline: clamp(20px, 4vw, 64px);
 }
@@ -32,7 +32,7 @@
 }
 
 .faq-item {
-  background: #ffffff;
+  background: #f1f3fe;
   border-radius: 12px;
   padding: 18px 22px;
   margin-bottom: 16px;

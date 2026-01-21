@@ -31,11 +31,10 @@ function Home() {
           </p>
 
           <div className="hero-actions">
-            <a href="#get-started" className="btn btn-primary">
-              Get Started
-            </a>
-            
-          </div>
+  <a href="#get-started" className="btn hero-btn">
+    Get Started
+  </a>
+</div>
         </div>
 
         {/* Right Image */}
@@ -86,12 +85,12 @@ function Home() {
 
   <div className="feature-card">
     <strong>Real-Time Photo Uploads</strong>
-    <p>Crew upload photos instantly as the event happens.</p>
+    <p>Crew securely upload photos instantly as the event happens.</p>
   </div>
 
   <div className="feature-card">
-    <strong>Private Event Access</strong>
-    <p>Only invited crew can upload event photos securely.</p>
+    <strong>Event Director Access</strong>
+    <p>Only the event director can manage and securely share uploaded photos.</p>
   </div>
 
   <div className="feature-card">
@@ -153,7 +152,7 @@ function Home() {
           <i className="fa-solid fa-clock"></i>
         </div>
         <div className="why-text">
-          <h4>Real time sharing</h4>
+          <h4>Time-Based sharing</h4>
           <p>Crew upload photos instantly as the event happens.</p>
         </div>
       </div>
