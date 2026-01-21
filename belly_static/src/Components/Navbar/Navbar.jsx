@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import bellylogo from "../../Images/bellylogo.jpeg";
+import bellylogo from "../../Images/bellylogo.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -107,7 +107,7 @@ function Navbar() {
 
 
           {/* Right Button */}
-          <div className="d-flex justify-content-center">
+          <div className="nav-btn d-flex justify-content-center">
             <a href="#get-started" className="btn btn-primary px-4 rounded-pill" onClick={closeNavbar}>
               Get the App
             </a>

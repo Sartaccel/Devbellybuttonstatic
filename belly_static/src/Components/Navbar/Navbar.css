@@ -32,20 +32,45 @@
   box-shadow: none;
 }
 
-/* Primary Button */
-.btn-primary {
+.nav-btn .btn-primary {
   background-color: #0b0b4f;
   border: none;
   font-weight: 500;
   font-size: 0.9rem;
+  position: relative;
+  border-radius: 50px;
+  animation: breatheGlow 3s ease-in-out infinite;
 }
 
-.btn-primary:hover {
+/* Smooth breathing animation (dark blue, mild) */
+@keyframes breatheGlow {
+  0% {
+    box-shadow:
+      rgba(20, 20, 122, 0.35) 0px 8px 26px 0px,
+      rgba(99, 102, 241, 0.12) 0px 0px 0px 5px;
+  }
+
+  50% {
+    box-shadow:
+      rgba(20, 20, 122, 0.55) 0px 12px 36px 0px,
+      rgba(99, 102, 241, 0.22) 0px 0px 0px 8px;
+  }
+
+  100% {
+    box-shadow:
+      rgba(20, 20, 122, 0.35) 0px 8px 26px 0px,
+      rgba(99, 102, 241, 0.12) 0px 0px 0px 5px;
+  }
+}
+
+
+
+.nav-btn .btn-primary:hover {
   background-color: #14147a;
 }
 
 /* Rounded Button */
-.rounded-pill {
+.nav-btn .rounded-pill {
   border-radius: 50px;
 }
 
@@ -59,18 +84,22 @@
     padding: 10px 0;
   }
 
-  .btn-primary {
+  .nav-btn .btn-primary {
     margin-top: 10px;
-    width: 100%;
+    width: auto;              /* 👈 NOT full width */
+    min-width: 160px;         /* 👈 controlled size */
+    padding: 12px 24px;   
+    animation: none !important;
+    box-shadow: none !important;
   }
 }
 @media (max-width: 360px) {
   
 
-  .btn-primary {
+  .nav-btn .btn-primary {
     margin-top: 10px;
-    width: auto;
-    max-width: 100%;
+    min-width: 140px;
+    padding: 10px 20px;
   }
 }
 
