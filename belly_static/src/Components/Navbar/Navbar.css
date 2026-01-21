@@ -1,0 +1,157 @@
+/* =========================
+   NAVBAR – BELLY BUTTON
+========================= */
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+
+
+/* Navbar Toggle */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-btn .btn-primary {
+  background-color: #0b0b4f;
+  border: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+  border-radius: 50px;
+  animation: breatheGlow 3s ease-in-out infinite;
+}
+
+/* Smooth breathing animation (dark blue, mild) */
+@keyframes breatheGlow {
+  0% {
+    box-shadow:
+      rgba(20, 20, 122, 0.35) 0px 8px 26px 0px,
+      rgba(99, 102, 241, 0.12) 0px 0px 0px 5px;
+  }
+
+  50% {
+    box-shadow:
+      rgba(20, 20, 122, 0.55) 0px 12px 36px 0px,
+      rgba(99, 102, 241, 0.22) 0px 0px 0px 8px;
+  }
+
+  100% {
+    box-shadow:
+      rgba(20, 20, 122, 0.35) 0px 8px 26px 0px,
+      rgba(99, 102, 241, 0.12) 0px 0px 0px 5px;
+  }
+}
+
+
+
+.nav-btn .btn-primary:hover {
+  background-color: #14147a;
+}
+
+/* Rounded Button */
+.nav-btn .rounded-pill {
+  border-radius: 50px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .navbar-nav {
+    padding-top: 10px;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+  }
+
+  .nav-btn .btn-primary {
+    margin-top: 10px;
+    width: auto;              /* 👈 NOT full width */
+    min-width: 160px;         /* 👈 controlled size */
+    padding: 12px 24px;   
+    animation: none !important;
+    box-shadow: none !important;
+  }
+}
+@media (max-width: 360px) {
+  
+
+  .nav-btn .btn-primary {
+    margin-top: 10px;
+    min-width: 140px;
+    padding: 10px 20px;
+  }
+}
+
+/* underline hover effect */
+/* Nav Links */
+.nav-link {
+  position: relative;          /* required for underline */
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #707781;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+
+.nav-link:hover {
+  color: #0b0b4f;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  height: 2px;                 /* 👈 height increases */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 2px;                 /* base height */
+  background-color: #0b0b4f;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+.nav-link.active::after {
+  transform: scaleX(1);
+  height: 2px;
+}
+
+
+/* Active link (optional) */
+.nav-link.active {
+  color: #0b0b4f;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .nav-link::after {
+    display: none;
+  }
+}
