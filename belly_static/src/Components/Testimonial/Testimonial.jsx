@@ -7,7 +7,7 @@ function Testimonial() {
       name: "Ananya S",
       image: "https://randomuser.me/api/portraits/women/44.jpg",
       text:
-        "Belly Button made it so easy to collect photos from everyone at our wedding. All memories in one place."
+        "BellyButton made it so easy to collect photos from everyone at our wedding. All memories in one place."
     },
     {
       name: "Rahul K",

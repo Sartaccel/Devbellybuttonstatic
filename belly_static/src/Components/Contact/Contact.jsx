@@ -161,14 +161,16 @@ function Contact() {
         <div className="form-group">
           <label>Phone Number</label>
           <PhoneInput
-            country={"in"}
-            value={form.phone}
-            onChange={(phone) => setForm({ ...form, phone })}
-            inputClass="phone-input"
-            containerClass="phone-container"
-            buttonClass="phone-flag"
-            placeholder="Phone number"
-          />
+  country="in"
+  onlyCountries={["in", "us", "ca"]}   // 👈 CHANGE 1
+  value={form.phone}
+  onChange={(phone) => setForm({ ...form, phone })}
+  inputClass="phone-input"
+  containerClass="phone-container"
+  buttonClass="phone-flag"
+  placeholder="Phone number"
+/>
+
           {errors.phone && <p className="error-text">{errors.phone}</p>}
         </div>
 

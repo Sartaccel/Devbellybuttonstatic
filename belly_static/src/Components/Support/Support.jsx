@@ -4,10 +4,26 @@ import "./Support.css";
 function Support() {
   const faqs = [
     {
+      question: "Why BellyButton?",
+      answer:
+        "Tired of asking friends to share photos after every event ? BellyButton makes it easy by giving everyone at your event a single shared space to upload and view photos instantly, so memories stay organized and nothing gets missed."
+    },
+    {
       question: "Who can create an event?",
       answer:
         "Only the Event director can create an event. The Event director sets the event details, schedule time, and manages camera crew access."
     },
+    {
+      question: "How many shoot events can I create?",
+      answer:
+        "You can create up to 4 events per month with your account."
+    },
+    {
+      question: "How many members can join one shoot event?",
+      answer:
+        "Each event allows up to 4 members to join and participate."
+    },
+    
     {
       question: "How do camera Crew join an event?",
       answer:
@@ -22,6 +38,11 @@ function Support() {
       question: "Who can access the photos?",
       answer: "All photos are private and can be accessed only by the Event director within the event."
 
+    },
+    {
+      question: "How is BellyButton different from normal photo sharing apps?",
+      answer:
+        "BellyButton shares photos in original quality without compression, unlike most photo sharing apps. "
     },
     {
       question: "Can photos be downloaded and shared?",
