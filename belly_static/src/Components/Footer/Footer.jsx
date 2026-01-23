@@ -40,13 +40,14 @@ function Footer() {
             <ul className="list-unstyled footer-text">
               <li>
                 <i className="fas fa-envelope me-2"></i>
-                <a href="mailto:support@bellybutton.app">
-                  bellybuttonapp@gmail.com
+                <a href="mailto:support@bellybutton.global">
+                  support@bellybutton.global
                 </a>
               </li>
               <li className="mt-2">
                 <i className="fas fa-phone me-2"></i>
-                <a href="tel:+919876543210">(404) 823-0257</a>
+               <a href="tel:+14048230257">(404) 823-0257</a>
+
               </li>
             </ul>
           </div>

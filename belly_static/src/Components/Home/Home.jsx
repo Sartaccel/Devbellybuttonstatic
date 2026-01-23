@@ -82,15 +82,14 @@ function Home() {
 
       {/* FEATURE CARDS*/}
       <div className="feature-cards no-icons">
+  <div className="feature-card">
+    <strong>Event Director Access</strong>
+    <p>Only the event director can manage and securely share uploaded photos.</p>
+  </div>      
 
   <div className="feature-card">
     <strong>Real-Time Photo Uploads</strong>
     <p>Crew securely upload photos instantly as the event happens.</p>
-  </div>
-
-  <div className="feature-card">
-    <strong>Event Director Access</strong>
-    <p>Only the event director can manage and securely share uploaded photos.</p>
   </div>
 
   <div className="feature-card">
@@ -219,7 +218,7 @@ function Home() {
             <i className="fa-solid fa-calendar-plus"></i>
           </div>
           <span className="flow-number">01</span>
-          <h4>Create Shoot</h4>
+          <h4>Create the Shoot</h4>
           <p>Event Directors set a defined start and end time.</p>
         </div>
 
@@ -278,7 +277,7 @@ function Home() {
     <h2 className="getstart-title">Start Sharing Moments</h2>
 
     <p className="getstart-subtitle">
-      Download the BellyButton app and create your event.
+      Download the BellyButton app and create your event. <br/>
       Available on Android and iOS.
     </p>
 
