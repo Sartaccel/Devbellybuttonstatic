@@ -161,8 +161,8 @@ function Contact() {
         <div className="form-group">
           <label>Phone Number</label>
           <PhoneInput
-  country="in"
-  onlyCountries={["in", "us", "ca"]}   // 👈 CHANGE 1
+  country="us"
+  onlyCountries={["us", "in", "ca"]}   
   value={form.phone}
   onChange={(phone) => setForm({ ...form, phone })}
   inputClass="phone-input"

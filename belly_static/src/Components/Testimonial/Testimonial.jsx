@@ -1,38 +1,41 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Testimonial.css";
+import flower from "../../Images/flower.jpg";
+import flower1 from "../../Images/flo.jpg";
+import flower2 from "../../Images/flower2.jpg";
 
 function Testimonial() {
   const testimonials = [
-    {
-      name: "Ananya S",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
-      text:
-        "BellyButton made it so easy to collect photos from everyone at our wedding. All memories in one place."
-    },
-    {
-      name: "Rahul K",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
-      text:
-        "No more asking people to send photos later. Everyone uploaded instantly during the event."
-    },
-    {
-      name: "Meera P",
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
-      text:
-        "Loved the private gallery and high quality downloads. Very clean and simple to use."
-    }
-  ];
+      {
+        name: "Ananya S",
+        image: flower,
+        text:
+          "BellyButton made it so easy to collect photos from everyone at our wedding. All memories in one place."
+      },
+      {
+        name: "Rahul K",
+        image: flower1,
+        text:
+          "No more asking people to send photos later. Everyone uploaded instantly during the event."
+      },
+      {
+        name: "Meera P",
+        image: flower2,
+        text:
+          "Loved the private gallery and high quality downloads. Very clean and simple to use."
+      }
+    ];
 
-  const [current, setCurrent] = useState(0);
-  const timerRef = useRef(null);
+    const [current, setCurrent] = useState(0);
+    const timerRef = useRef(null);
 
-  useEffect(() => {
-    timerRef.current = setTimeout(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
+    useEffect(() => {
+      timerRef.current = setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % testimonials.length);
+      }, 6000);
 
-    return () => clearTimeout(timerRef.current);
-  }, [current, testimonials.length]);
+      return () => clearTimeout(timerRef.current);
+    }, [current, testimonials.length]);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % testimonials.length);
