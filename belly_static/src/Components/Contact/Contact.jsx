@@ -170,7 +170,7 @@ function Contact() {
   buttonClass="phone-flag"
   placeholder="Phone number"
 />
-
+  
           {errors.phone && <p className="error-text">{errors.phone}</p>}
         </div>
 
