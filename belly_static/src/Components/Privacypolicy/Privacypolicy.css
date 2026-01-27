@@ -1,0 +1,160 @@
+.privacy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 25px;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  line-height: 1.8;
+  background-color: #ffffff;
+}
+
+/* Main title */
+.privacy-container h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+/* Company name & date */
+.privacy-container p strong {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+}
+
+.privacy-container p:nth-of-type(2) {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* Section headings */
+.privacy-container h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+.privacy-container p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #374151;
+}
+
+/* Lists */
+.privacy-container ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.privacy-container li {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+/* Contact section */
+.privacy-container h3:last-of-type + p {
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 30px 15px;
+  }
+
+  .privacy-container h1 {
+    font-size: 28px;
+  }
+
+  .privacy-container h3 {
+    font-size: 16px;
+  }
+}
+.sms-actions {
+  display: grid;
+  grid-template-columns: 120px auto;
+  gap: 8px 20px;
+  margin: 15px 0;
+}
+
+.sms-actions strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .privacy-container {
+    padding: 40px 20px;
+  }
+
+  .privacy-container h1 {
+    font-size: 30px;
+  }
+
+  .privacy-container h3 {
+    font-size: 17px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 30px 15px;
+  }
+
+  .privacy-container h1 {
+    font-size: 26px;
+  }
+
+  .privacy-container h3 {
+    font-size: 16px;
+  }
+
+  .privacy-container p,
+  .privacy-container li {
+    font-size: 14px;
+  }
+
+  .sms-actions {
+    grid-template-columns: 1fr;   /* Stack vertically on mobile */
+    gap: 6px;
+  }
+
+  .sms-actions strong {
+    margin-top: 10px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .privacy-container {
+    padding: 25px 12px;
+  }
+
+  .privacy-container h1 {
+    font-size: 22px;
+  }
+
+  .privacy-container h3 {
+    font-size: 15px;
+  }
+
+  .privacy-container p,
+  .privacy-container li {
+    font-size: 13.5px;
+  }
+}

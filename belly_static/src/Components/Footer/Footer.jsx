@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import footlogo from "../../Images/footlogo.png";
 
-function Footer() {
+function Footer({ openPrivacy }) {
   return (
     <footer className="footer-dark pt-5">
       <div className="container">
@@ -22,16 +22,17 @@ function Footer() {
             <h6 className="footer-title">Quick Links</h6>
             <ul className="list-unstyled footer-links">
               <li>
-                <a href="#product">About</a>
+                <a href="/#product">About</a>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+               <a href="/privacy-policy">Privacy Policy</a>
+
               </li>
               <li>
                 <a href="#">Term of Service</a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="/#contact">Contact</a>
               </li>
             </ul>
           </div>
