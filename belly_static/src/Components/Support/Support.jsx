@@ -19,6 +19,12 @@ function Support() {
         "You can create up to 4 events per month with your account."
     },
     {
+      question: "Is BellyButton free or paid?",
+      answer:
+        "BellyButton offers a free plan that allows up to 4 events per month."
+    },
+
+    {
       question: "How many members can join one shoot event?",
       answer:
         "Each event allows up to 4 members to join and participate."
@@ -48,6 +54,11 @@ function Support() {
       question: "Can photos be downloaded and shared?",
       answer: "Event director can download photos in original quality and share selected moments."
 
+    },
+    {
+      question: "Does BellyButton work on both iOS and Android?",
+      answer:
+        "Yes. BellyButton works on both iOS and Android devices, ensuring seamless participation for all users."
     }
   ];
 
