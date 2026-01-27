@@ -4,6 +4,11 @@ import "react-phone-input-2/lib/style.css";
 import "./Contact.css";
 
 function Contact() {
+
+  // ✅ 1️⃣ Anti-spam states (TOP)
+  const [human, setHuman] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -11,6 +16,7 @@ function Contact() {
     message: ""
   });
 
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [alert, setAlert] = useState({
     show: false,
@@ -46,7 +52,7 @@ function Contact() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // ---------------- SUBMIT (Web3Forms) ----------------
+  // ---------------- SUBMIT ----------------
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -56,13 +62,25 @@ function Contact() {
         type: "error",
         message: "Please fix the errors before submitting."
       });
-
-      setTimeout(() => {
-        setAlert({ show: false, type: "", message: "" });
-      }, 3000);
-
       return;
     }
+
+    // 🫙 4️⃣ Honeypot check (silent block)
+    if (honeypot) {
+      return;
+    }
+
+    // ☑️ Checkbox check
+    if (!human) {
+      setAlert({
+        show: true,
+        type: "error",
+        message: "Please confirm you are not a robot."
+      });
+      return;
+    }
+
+    setLoading(true);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -71,16 +89,16 @@ function Contact() {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          access_key: "d6ebbf96-e213-4355-b66e-95161f2f0d64", // 👈 paste here
+          access_key: "d6ebbf96-e213-4355-b66e-95161f2f0d64",
           subject: "New Message from BellyButton Website",
           from_name: "BellyButton Website",
+
           name: form.name,
           email: form.email,
           phone: form.phone,
           message: form.message,
 
-          // spam protection
-          botcheck: ""
+          botcheck: "" // 🛡️ optional extra safety
         })
       });
 
@@ -99,23 +117,25 @@ function Contact() {
           phone: "",
           message: ""
         });
+        setHuman(false);
+        setHoneypot("");
       } else {
         throw new Error("Submission failed");
       }
 
     } catch (error) {
       console.error("Web3Forms Error:", error);
-
       setAlert({
         show: true,
         type: "error",
         message: "Something went wrong. Please try again later."
       });
+    } finally {
+      setLoading(false);
+      setTimeout(() => {
+        setAlert({ show: false, type: "", message: "" });
+      }, 3000);
     }
-
-    setTimeout(() => {
-      setAlert({ show: false, type: "", message: "" });
-    }, 3000);
   };
 
   return (
@@ -132,6 +152,16 @@ function Contact() {
       )}
 
       <form className="contact-form" onSubmit={handleSubmit}>
+
+        {/* 🫙 2️⃣ Honeypot field (TOP, hidden) */}
+        <input
+          type="text"
+          name="company"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          autoComplete="off"
+          className="honeypot"
+        />
 
         {/* Name */}
         <div className="form-group">
@@ -161,16 +191,14 @@ function Contact() {
         <div className="form-group">
           <label>Phone Number</label>
           <PhoneInput
-  country="us"
-  onlyCountries={["us", "in", "ca"]}   
-  value={form.phone}
-  onChange={(phone) => setForm({ ...form, phone })}
-  inputClass="phone-input"
-  containerClass="phone-container"
-  buttonClass="phone-flag"
-  placeholder="Phone number"
-/>
-  
+            country="us"
+            onlyCountries={["in", "us", "ca"]}
+            value={form.phone}
+            onChange={(phone) => setForm({ ...form, phone })}
+            inputClass="phone-input"
+            containerClass="phone-container"
+            placeholder="Phone number"
+          />
           {errors.phone && <p className="error-text">{errors.phone}</p>}
         </div>
 
@@ -186,8 +214,23 @@ function Contact() {
           {errors.message && <p className="error-text">{errors.message}</p>}
         </div>
 
-        <button type="submit" className="contact-btn">
-          Submit
+        {/* ☑️ 3️⃣ Human checkbox */}
+        {/* Human verification */}
+<div className="human-check">
+  <label className="custom-checkbox">
+    <input
+      type="checkbox"
+      checked={human}
+      onChange={(e) => setHuman(e.target.checked)}
+    />
+    <span className="checkmark"></span>
+    <span className="checkbox-text">I’m not a robot</span>
+  </label>
+</div>
+
+
+        <button type="submit" className="contact-btn" disabled={loading}>
+          {loading ? "Sending..." : "Submit"}
         </button>
 
       </form>
