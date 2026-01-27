@@ -8,6 +8,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
+import Privacypolicy from './Components/Privacypolicy/Privacypolicy';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         {/* Single Page */}
         <Route path="/" element={<Home />} />
+         <Route path="/privacy-policy" element={<Privacypolicy />} />
       </Routes>
 
       <Footer />

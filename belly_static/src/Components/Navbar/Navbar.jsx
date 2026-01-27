@@ -15,7 +15,7 @@ function Navbar() {
     const navLinks = document.querySelectorAll(".nav-link");
 
     const handleScroll = () => {
-      let scrollPosition = window.scrollY + 120; // offset for sticky navbar
+      let scrollPosition = window.scrollY + 120;
 
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -45,7 +45,7 @@ function Navbar() {
       <div className="container-fluid">
 
         {/* Logo */}
-        <a className="navbar-brand" href="#hero">
+        <a className="navbar-brand" href="/#hero">
           <img src={bellylogo} alt="Belly Button" width="100" />
         </a>
 
@@ -67,48 +67,46 @@ function Navbar() {
 
           {/* Center Links */}
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 text-center">
-  <li className="nav-item">
-    <a className="nav-link" href="#product" data-section="product" onClick={closeNavbar}>
-      About
-    </a>
-  </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#product" data-section="product" onClick={closeNavbar}>
+                About
+              </a>
+            </li>
 
-  <li className="nav-item">
-    <a className="nav-link" href="#why-us" data-section="why-us" onClick={closeNavbar}>
-      Why Us
-    </a>
-  </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#why-us" data-section="why-us" onClick={closeNavbar}>
+                Why Us
+              </a>
+            </li>
 
-  <li className="nav-item">
-    <a className="nav-link" href="#how-it-works" data-section="how-it-works" onClick={closeNavbar}>
-      How It Works
-    </a>
-  </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#how-it-works" data-section="how-it-works" onClick={closeNavbar}>
+                How It Works
+              </a>
+            </li>
 
-  <li className="nav-item">
-    <a className="nav-link" href="#stories" data-section="stories" onClick={closeNavbar}>
-      Stories
-    </a>
-  </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#stories" data-section="stories" onClick={closeNavbar}>
+                Stories
+              </a>
+            </li>
 
-  <li className="nav-item">
-    <a className="nav-link" href="#support" data-section="support" onClick={closeNavbar}>
-      Support
-    </a>
-  </li>
-  <li className="nav-item">
-    <a className="nav-link" href="#contact" data-section="contact" onClick={closeNavbar}>
-      Contact
-    </a>
-  </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#support" data-section="support" onClick={closeNavbar}>
+                Support
+              </a>
+            </li>
 
-  
-</ul>
-
+            <li className="nav-item">
+              <a className="nav-link" href="/#contact" data-section="contact" onClick={closeNavbar}>
+                Contact
+              </a>
+            </li>
+          </ul>
 
           {/* Right Button */}
           <div className="nav-btn d-flex justify-content-center">
-            <a href="#get-started" className="btn btn-primary px-4 rounded-pill" onClick={closeNavbar}>
+            <a href="/#get-started" className="btn btn-primary px-4 rounded-pill" onClick={closeNavbar}>
               Get the App
             </a>
           </div>
