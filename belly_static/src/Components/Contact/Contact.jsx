@@ -5,7 +5,7 @@ import "./Contact.css";
 
 function Contact() {
 
-  // ✅ 1️⃣ Anti-spam states (TOP)
+  // 🔐 Anti-spam
   const [human, setHuman] = useState(false);
   const [honeypot, setHoneypot] = useState("");
 
@@ -65,12 +65,10 @@ function Contact() {
       return;
     }
 
-    // 🫙 4️⃣ Honeypot check (silent block)
-    if (honeypot) {
-      return;
-    }
+    // 🫙 Honeypot silent block
+    if (honeypot) return;
 
-    // ☑️ Checkbox check
+    // ☑️ Human check (extra safety)
     if (!human) {
       setAlert({
         show: true,
@@ -98,7 +96,7 @@ function Contact() {
           phone: form.phone,
           message: form.message,
 
-          botcheck: "" // 🛡️ optional extra safety
+          botcheck: ""
         })
       });
 
@@ -153,7 +151,7 @@ function Contact() {
 
       <form className="contact-form" onSubmit={handleSubmit}>
 
-        {/* 🫙 2️⃣ Honeypot field (TOP, hidden) */}
+        {/* 🫙 Honeypot */}
         <input
           type="text"
           name="company"
@@ -214,22 +212,25 @@ function Contact() {
           {errors.message && <p className="error-text">{errors.message}</p>}
         </div>
 
-        {/* ☑️ 3️⃣ Human checkbox */}
-        {/* Human verification */}
-<div className="human-check">
-  <label className="custom-checkbox">
-    <input
-      type="checkbox"
-      checked={human}
-      onChange={(e) => setHuman(e.target.checked)}
-    />
-    <span className="checkmark"></span>
-    <span className="checkbox-text">I’m not a robot</span>
-  </label>
-</div>
+        {/* ☑️ Human checkbox */}
+        <div className="human-check">
+          <label className="custom-checkbox">
+            <input
+              type="checkbox"
+              checked={human}
+              onChange={(e) => setHuman(e.target.checked)}
+            />
+            <span className="checkmark"></span>
+            <span className="checkbox-text">I’m not a robot</span>
+          </label>
+        </div>
 
-
-        <button type="submit" className="contact-btn" disabled={loading}>
+        {/* 🚫 Submit Button */}
+        <button
+          type="submit"
+          className="contact-btn"
+          disabled={loading || !human}
+        >
           {loading ? "Sending..." : "Submit"}
         </button>
 
@@ -239,3 +240,4 @@ function Contact() {
 }
 
 export default Contact;
+ 
