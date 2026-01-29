@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import footerlogo from "../../Images/footerlogo.svg";
+import footlogo from "../../Images/footlogo.png";
 function Footer({ openPrivacy }) {
   return (
     <footer className="footer-dark pt-5">
@@ -9,7 +9,7 @@ function Footer({ openPrivacy }) {
           {/* 1️⃣ Logo + Content */}
           <div className="col-lg-4 col-md-6">
             <div className="footer-logo d-flex align-items-center mb-3">
-              <img src={footerlogo} alt="Belly Button" className="me-2" />
+              <img src={footlogo} alt="Belly Button" className="me-2" />
             </div>
             <p className="footer-text">
               Moments happen once. Memories grow when shared together.

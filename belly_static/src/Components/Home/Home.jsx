@@ -3,13 +3,14 @@ import heroimg from "../../Images/heroimg.png"
 import product from "../../Images/product.png"
 import Android from "../../Images/Android.jpg"
 import iOS from "../../Images/iOS.png"
-import mobile from"../../Images/mobile.avif"
+import demovideo from "../../Images/demovideo.mp4"
 import "./Home.css";
 import Testimonial from "../Testimonial/Testimonial";
 import Support from "../Support/Support";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../Scroll/ScrollToTop";
 function Home() {
+  
   return (
     <>
     {/* -------------------------------------------hero-section--------------------------------------- */}
@@ -192,11 +193,18 @@ function Home() {
 
     {/* RIGHT SIDE — IMAGE */}
     <div className="why-right">
-      <img
-        src={mobile}
-        alt="BellyButton App Preview"
-      />
-    </div>
+  <video
+    src={demovideo}
+    controls
+    playsInline
+    className="app-video"
+    controlsList="nodownload noplaybackrate noremoteplayback"
+    disablePictureInPicture
+  />
+</div>
+
+
+
 
   </div>
 </section>
