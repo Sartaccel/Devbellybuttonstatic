@@ -195,6 +195,9 @@ function Home() {
     <div className="why-right">
   <video
     src={demovideo}
+    autoPlay        // starts automatically
+    loop            // repeats continuously
+    muted           // required for autoplay
     controls
     playsInline
     className="app-video"
@@ -202,6 +205,7 @@ function Home() {
     disablePictureInPicture
   />
 </div>
+
 
 
 
