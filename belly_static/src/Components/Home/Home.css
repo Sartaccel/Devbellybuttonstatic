@@ -498,11 +498,11 @@ body {
 
 .why-right video {
   width: auto;
-  height: 70vh;              /* ✅ fit screen height */
+  height: 80vh;              /* fit screen height */
   max-width: 100%;
   border-radius: 20px;
   object-fit: contain;
-    border: 2px solid #E6E9FF;
+  border: 2px solid #E6E9FF;
 
 }
 
