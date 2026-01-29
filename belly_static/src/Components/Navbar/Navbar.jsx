@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-// import bellylogo from "../../Images/bellylogo.png";
-import headerlogo from "../../Images/headerlogo.svg";
+import bellylogo from "../../Images/bellylogo.png";
+// import headerlogo from "../../Images/headerlogo.svg";
 import "./Navbar.css";
 
 function Navbar() {
@@ -47,7 +47,7 @@ function Navbar() {
 
         {/* Logo */}
         <a className="navbar-brand" href="/#hero">
-          <img src={headerlogo} alt="Belly Button" width="100" />
+          <img src={bellylogo} alt="Belly Button" width="100" />
         </a>
 
         {/* Mobile Toggle */}

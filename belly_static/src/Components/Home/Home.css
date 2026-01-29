@@ -493,13 +493,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.why-right img {
+.why-right video {
+  width: auto;
+  height: 70vh;              /* ✅ fit screen height */
   max-width: 100%;
-  height: auto;
   border-radius: 20px;
+  object-fit: contain;
+    border: 2px solid #E6E9FF;
+
 }
+
+
+
 
 /* Vertical line (only for left side) */
 .why-line {
