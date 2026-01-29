@@ -60,7 +60,7 @@ function Contact() {
       setAlert({
         show: true,
         type: "error",
-        message: "Please fix the errors before submitting."
+        message: "Please fill all the required fields."
       });
       return;
     }
