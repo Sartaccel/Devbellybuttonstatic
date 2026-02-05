@@ -591,6 +591,7 @@ body {
   .why-title {
     font-size: 30px;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -600,6 +601,9 @@ body {
 
   .why-item {
     align-items: flex-start;
+  }
+  .why-right video {
+    border: none;
   }
 }
 
