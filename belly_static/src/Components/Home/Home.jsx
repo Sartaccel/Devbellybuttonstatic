@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+
 import heroimg from "../../Images/heroimg.png"
 import product from "../../Images/product.png"
 import Android from "../../Images/Android.jpg"
@@ -10,6 +11,28 @@ import Support from "../Support/Support";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../Scroll/ScrollToTop";
 function Home() {
+    const videoRef = useRef(null);
+
+  useEffect(() => {
+  const video = videoRef.current;
+  if (!video) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        video.muted = false; // 🔊 try to unmute
+      } else {
+        video.muted = true;  // 🔇 mute again
+      }
+    },
+    { threshold: 0.6 }
+  );
+
+  observer.observe(video);
+  return () => observer.disconnect();
+}, []);
+
+
   
   return (
     <>
@@ -194,10 +217,11 @@ function Home() {
     {/* RIGHT SIDE — IMAGE */}
     <div className="why-right">
   <video
+    ref={videoRef}        // 👈 ADD THIS
     src={demovideo}
-    autoPlay        // starts automatically
-    loop            // repeats continuously
-    muted           // required for autoplay
+    autoPlay
+    loop
+    muted                 // required for autoplay
     controls
     playsInline
     className="app-video"
@@ -205,6 +229,7 @@ function Home() {
     disablePictureInPicture
   />
 </div>
+
 
 
 
