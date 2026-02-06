@@ -13,15 +13,19 @@ import ScrollToTop from "../Scroll/ScrollToTop";
 function Home() {
     const videoRef = useRef(null);
 
-  useEffect(() => {
+useEffect(() => {
   const video = videoRef.current;
   if (!video) return;
 
   const observer = new IntersectionObserver(
     ([entry]) => {
       if (entry.isIntersecting) {
+        // ▶ Resume video when it comes into view
+        video.play().catch(() => {});
         video.muted = false; // 🔊 try to unmute
       } else {
+        // ⏸ Pause video when it goes out of view
+        video.pause();
         video.muted = true;  // 🔇 mute again
       }
     },
@@ -31,6 +35,7 @@ function Home() {
   observer.observe(video);
   return () => observer.disconnect();
 }, []);
+
 
 
   

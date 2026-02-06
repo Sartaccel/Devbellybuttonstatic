@@ -603,7 +603,8 @@ body {
     align-items: flex-start;
   }
   .why-right video {
-    border: none;
+    border: 2px solid #c4dbfc;
+    height: 70vh;
   }
 }
 
