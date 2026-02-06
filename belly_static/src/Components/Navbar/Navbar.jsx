@@ -43,7 +43,7 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3">
-      <div className="container-fluid">
+      <div className="container">
 
         {/* Logo */}
         <a className="navbar-brand" href="/#hero">
