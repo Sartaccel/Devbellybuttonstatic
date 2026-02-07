@@ -487,27 +487,6 @@ body {
   position: relative;             /* needed for vertical line */
 }
 
-/* 🔹 RIGHT SIDE (IMAGE) */
-.why-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.why-right video {
-  width: auto;
-  height: 80vh;              /* fit screen height */
-  max-width: 100%;
-  border-radius: 20px;
-  object-fit: contain;
-  border: 2px solid #E6E9FF;
-
-}
-
-
-
 
 /* Vertical line (only for left side) */
 .why-line {
@@ -574,9 +553,7 @@ body {
     gap: 50px;
   }
 
-  .why-right {
-    order: -1;                    /* image on top (optional) */
-  }
+  
 }
 
 @media (max-width: 768px) {
@@ -602,10 +579,7 @@ body {
   .why-item {
     align-items: flex-start;
   }
-  .why-right video {
-    border: 2px solid #c4dbfc;
-    height: 70vh;
-  }
+  
 }
 
 /* ---------------------------------------------------how it works-------------------------------------- */
