@@ -1,44 +1,15 @@
-import React, { useEffect, useRef } from "react";
-
 import heroimg from "../../Images/heroimg.png"
 import product from "../../Images/product.png"
 import Android from "../../Images/Android.jpg"
 import iOS from "../../Images/iOS.png"
-import demovideo from "../../Images/demovideo.mp4"
 import "./Home.css";
+import Video from "../Video/Video";
 import Testimonial from "../Testimonial/Testimonial";
 import Support from "../Support/Support";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../Scroll/ScrollToTop";
 function Home() {
-    const videoRef = useRef(null);
 
-useEffect(() => {
-  const video = videoRef.current;
-  if (!video) return;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        // ▶ Resume video when it comes into view
-        video.play().catch(() => {});
-        video.muted = false; // 🔊 try to unmute
-      } else {
-        // ⏸ Pause video when it goes out of view
-        video.pause();
-        video.muted = true;  // 🔇 mute again
-      }
-    },
-    { threshold: 0.6 }
-  );
-
-  observer.observe(video);
-  return () => observer.disconnect();
-}, []);
-
-
-
-  
   return (
     <>
     {/* -------------------------------------------hero-section--------------------------------------- */}
@@ -219,22 +190,9 @@ useEffect(() => {
 
     </div>
 
-    {/* RIGHT SIDE — IMAGE */}
-    <div className="why-right">
-  <video
-    ref={videoRef}        // 👈 ADD THIS
-    src={demovideo}
-    autoPlay
-    loop
-    muted                 // required for autoplay
-    controls
-    playsInline
-    className="app-video"
-    controlsList="nodownload noplaybackrate noremoteplayback"
-    disablePictureInPicture
-  />
-</div>
+    {/* RIGHT SIDE — VIDEO */}
 
+     <Video/>
 
 
 
