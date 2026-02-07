@@ -1,0 +1,64 @@
+/* Hide play & pause */
+.app-video::-webkit-media-controls-play-button,
+.app-video::-webkit-media-controls-pause-button {
+  display: none !important;
+}
+
+/* Hide timeline */
+.app-video::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+/* Hide fullscreen */
+.app-video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+/* Hide settings (3 dots / gear) */
+.app-video::-webkit-media-controls-overflow-button {
+  display: none !important;
+}
+
+
+/* 🔹 RIGHT SIDE (IMAGE) */
+.why-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.why-right video {
+  width: auto;
+  height: 80vh;              /* fit screen height */
+  max-width: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+  border: 2px solid #E6E9FF;
+
+}
+.app-video {
+  pointer-events: none;
+}
+
+
+
+@media (max-width: 992px) {
+  
+
+  .why-right {
+    order: -1;                    /* image on top (optional) */
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  
+  .why-right video {
+    border: 2px solid #c4dbfc;
+    height: 70vh;
+  }
+}
