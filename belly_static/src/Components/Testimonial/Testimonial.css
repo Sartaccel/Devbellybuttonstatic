@@ -15,7 +15,7 @@
 .testimonial-title {
   font-size: 36px;
   font-weight: 800;
-  color: #0B0B4F;
+  color: #052F6F;
   margin-bottom: 50px;
 }
 
@@ -32,7 +32,7 @@
 .t-arrow {
   font-size: 32px;
   cursor: pointer;
-  color: #0B0B4F;
+  color: #052F6F;
   user-select: none;
 }
 
@@ -58,7 +58,7 @@
 .testimonial-name {
   font-size: 16px;
   font-weight: 600;
-  color: #0B0B4F;
+  color: #052F6F;
 }
 
 .testimonial-dots {
@@ -76,7 +76,7 @@
 }
 
 .testimonial-dots .dot.active {
-  background: #0B0B4F;
+  background: #052F6F;
 }
 
 /* Mobile */

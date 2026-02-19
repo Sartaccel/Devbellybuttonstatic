@@ -285,7 +285,8 @@ function Home() {
 
       {/* Google Play */}
       <a
-        href="#playstore"
+        href="https://play.google.com/store/apps/details?id=com.bellybutton.dev.bellybutton"
+        target="_blank"
         className="store-btn"
         aria-label="Get it on Google Play"
       >
