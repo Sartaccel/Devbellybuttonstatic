@@ -8,6 +8,8 @@ import Testimonial from "../Testimonial/Testimonial";
 import Support from "../Support/Support";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../Scroll/ScrollToTop";
+import Playstore from "../../Images/Playstore.png"
+import Appstore from "../../Images/Appstore.png"
 function Home() {
 
   return (
@@ -271,7 +273,7 @@ function Home() {
     <Support/>
     <Contact/>
 {/* --------------------------------------------------------Get Started--------------------------------- */}
-     <section id="get-started" className="getstart-section">
+    <section id="get-started" className="getstart-section">
   <div className="getstart-wrapper">
 
     <h2 className="getstart-title">Start Sharing Moments</h2>
@@ -281,29 +283,29 @@ function Home() {
       Available on Android and iOS.
     </p>
 
+    {/* Images Row */}
+    <div className="image-row">
+      <img src={Playstore} alt="App preview" className="side-image"/>
+      <img src={Appstore} alt="App preview" className="side-image"/>
+    </div>
+
+    {/* Buttons Row */}
     <div className="store-buttons">
 
-      {/* Google Play */}
       <a
         href="https://play.google.com/store/apps/details?id=com.bellybutton.dev.bellybutton"
         target="_blank"
         className="store-btn"
-        aria-label="Get it on Google Play"
       >
-        <img src={Android} alt="Google Play" className="store-icon" />
+        <img src={Android} alt="Google Play" className="store-icon"/>
         <div className="store-text">
           <span>Get it on</span>
           <strong>Google Play</strong>
         </div>
       </a>
 
-      {/* App Store */}
-      <a
-        href="#appstore"
-        className="store-btn"
-        aria-label="Download on the App Store"
-      >
-        <img src={iOS} alt="App Store" className="store-icon" />
+      <a href="#appstore" className="store-btn">
+        <img src={iOS} alt="App Store" className="store-icon"/>
         <div className="store-text">
           <span>Download on the</span>
           <strong>App Store</strong>
