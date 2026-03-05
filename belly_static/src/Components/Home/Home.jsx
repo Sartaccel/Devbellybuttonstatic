@@ -273,44 +273,48 @@ function Home() {
     <Support/>
     <Contact/>
 {/* --------------------------------------------------------Get Started--------------------------------- */}
-    <section id="get-started" className="getstart-section">
+   <section id="get-started" className="getstart-section">
   <div className="getstart-wrapper">
 
     <h2 className="getstart-title">Start Sharing Moments</h2>
 
     <p className="getstart-subtitle">
-      Download the BellyButton app and create your event. <br/>
+      Download the BellyButton app and create your event. <br />
       Available on Android and iOS.
     </p>
 
-    {/* Images Row */}
-    <div className="image-row">
-      <img src={Playstore} alt="App preview" className="side-image"/>
-      <img src={Appstore} alt="App preview" className="side-image"/>
-    </div>
+    {/* App Layout */}
+    <div className="app-container">
 
-    {/* Buttons Row */}
-    <div className="store-buttons">
+      {/* Left Side */}
+      <div className="app-box">
+        <img src={Playstore} alt="Android App Preview" className="app-image" />
 
-      <a
-        href="https://play.google.com/store/apps/details?id=com.bellybutton.dev.bellybutton"
-        target="_blank"
-        className="store-btn"
-      >
-        <img src={Android} alt="Google Play" className="store-icon"/>
-        <div className="store-text">
-          <span>Get it on</span>
-          <strong>Google Play</strong>
-        </div>
-      </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.bellybutton.dev.bellybutton"
+          target="_blank"
+          className="store-btn"
+        >
+          <img src={Android} alt="Google Play" className="store-icon"/>
+          <div className="store-text">
+            <span>Get it on</span>
+            <strong>Google Play</strong>
+          </div>
+        </a>
+      </div>
 
-      <a href="#appstore" className="store-btn">
-        <img src={iOS} alt="App Store" className="store-icon"/>
-        <div className="store-text">
-          <span>Download on the</span>
-          <strong>App Store</strong>
-        </div>
-      </a>
+      {/* Right Side */}
+      <div className="app-box">
+        <img src={Appstore} alt="iOS App Preview" className="app-image" />
+
+        <a href="#appstore" className="store-btn">
+          <img src={iOS} alt="App Store" className="store-icon"/>
+          <div className="store-text">
+            <span>Download on the</span>
+            <strong>App Store</strong>
+          </div>
+        </a>
+      </div>
 
     </div>
 
