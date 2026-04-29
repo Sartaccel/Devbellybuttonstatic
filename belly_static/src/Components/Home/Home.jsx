@@ -9,7 +9,7 @@ import Support from "../Support/Support";
 import Contact from "../Contact/Contact";
 import ScrollToTop from "../Scroll/ScrollToTop";
 import Playstore from "../../Images/Playstore.png"
-import Appstore from "../../Images/Appstore.png"
+import Appstore from "../../Images/URL QR Code.png"
 function Home() {
 
   return (
@@ -304,17 +304,23 @@ function Home() {
       </div>
 
       {/* Right Side */}
-      <div className="app-box">
-        <img src={Appstore} alt="iOS App Preview" className="app-image" />
+     {/* Right Side */}
+<div className="app-box">
+  <img src={Appstore} alt="iOS App Preview" className="app-image" />
 
-        <a href="#appstore" className="store-btn">
-          <img src={iOS} alt="App Store" className="store-icon"/>
-          <div className="store-text">
-            <span>Download on the</span>
-            <strong>App Store</strong>
-          </div>
-        </a>
-      </div>
+  <a
+    href="https://apps.apple.com/in/app/bellybutton/id6756732114"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="store-btn"
+  >
+    <img src={iOS} alt="App Store" className="store-icon"/>
+    <div className="store-text">
+      <span>Download on the</span>
+      <strong>App Store</strong>
+    </div>
+  </a>
+</div>
 
     </div>
 
